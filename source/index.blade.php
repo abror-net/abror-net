@@ -17,15 +17,21 @@
                 </a>
             </h2>
 
+            <p class="mb-4 mt-0">
+                @if ($featuredPost->categories)
+                @foreach ($featuredPost->categories as $i => $category)
+                    <a
+                        href="{{ '/blog/categories/' . $category }}"
+                        title="View posts in {{ $category }}"
+                        class="inline-block bg-grey-light hover:bg-blue-lighter leading-loose tracking-wide text-grey-darkest uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+                    >{{ $category }}</a>
+                @endforeach
+                @endif
+            </p>
+
             <p class="font-medium my-2">
                 {{ $featuredPost->description}}
             </p>
-            <p></p>
-            <p class="mt-0 mb-4">{!! $featuredPost->getExcerpt() !!}</p>
-
-            <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}" class="tracking-wide mb-4">
-                {{ ['Read Me !', 'Read This!', 'Looks Interesting!', 'Try This!', 'Go Here!', 'Click Me!', 'Me? Yes!'][mt_rand(0, 6)] }}
-            </a>
         </div>
 
         @if (! $loop->last)
