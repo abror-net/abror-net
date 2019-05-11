@@ -26,7 +26,12 @@ return [
 
     // helpers
     'getDate' => function ($page) {
-        return Datetime::createFromFormat('U', $page->date);
+        $raw_time = $page->date;
+        if (strpos($raw_time, 'T') !== false) {
+            return Datetime::createFromFormat('U', strtotime($raw_time));
+        } else {
+            return Datetime::createFromFormat('U', $page->date);
+        }
     },
     'getExcerpt' => function ($page, $length = 255) {
         $content = $page->excerpt ?? $page->getContent();
