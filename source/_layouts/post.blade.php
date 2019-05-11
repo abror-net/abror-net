@@ -14,6 +14,7 @@
 
     <h1 class="leading-none mb-2">{{ $page->title }}</h1>
 
+    <p class="text-xl md:mt-0">{{ $page->description }}</p>
     <p class="text-grey-darker text-xl md:mt-0">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
 
     @if ($page->categories)

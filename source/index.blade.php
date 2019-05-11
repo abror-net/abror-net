@@ -17,10 +17,14 @@
                 </a>
             </h2>
 
+            <p class="font-medium my-2">
+                {{ $featuredPost->description}}
+            </p>
+            <p></p>
             <p class="mt-0 mb-4">{!! $featuredPost->getExcerpt() !!}</p>
 
-            <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}" class="uppercase tracking-wide mb-4">
-                Read
+            <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}" class="tracking-wide mb-4">
+                {{ ['Read Me !!!', 'Read This', 'Looks Interesting!', 'Try This!', 'Go Here!', 'Click Me!', 'Me? Yes!'][mt_rand(0, 6)] }}
             </a>
         </div>
 
@@ -29,9 +33,9 @@
         @endif
     @endforeach
 
-    @include('_components.newsletter-signup')
+    {{-- @include('_components.newsletter-signup') --}}
 
-    @foreach ($posts->where('featured', false)->take(6)->chunk(2) as $row)
+    @foreach ($posts->where('featured', false)->chunk(2) as $row)
         <div class="flex flex-col md:flex-row md:-mx-6">
             @foreach ($row as $post)
                 <div class="w-full md:w-1/2 md:mx-6">

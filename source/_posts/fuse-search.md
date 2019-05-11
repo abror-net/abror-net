@@ -16,4 +16,3 @@ To provide fast, local search of your blog, this starter template comes with a p
 During the [build process](http://jigsaw.tighten.co/docs/building-and-previewing/), the contents of your `posts` collection is processed by the `GenerateIndex.php` listener, and an `index.json` file is generated in the build directory. The `Search.vue` component provides a search input that queries this local index.
 
 If you'd like to customize the generation of your search index, take a look at the `handle` method of the `GenerateIndex.php` file.
-
