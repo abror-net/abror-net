@@ -20,7 +20,7 @@ collections:
     identifier_field: "title"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true, default: "" }
-      - { label: "Author", name: "author", widget: "string", required: true, default: "" }
+      - { label: "Author", name: "author", widget: "string", required: true, default: "Muhammad Muhlas" }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDThh:mm:ss", required: true, default: "" }
       - { label: "Description", name: "description", widget: "string", required: true, default: "" }
       - { label: "Content", name: "body", widget: "markdown", hint: "Main content goes here." }
