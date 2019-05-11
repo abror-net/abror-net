@@ -20,7 +20,15 @@
         @stack('meta')
 
         @if ($page->production)
-            <!-- Insert analytics code here -->
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73461818-1"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-73461818-1');
+            </script>
         @endif
 
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
@@ -57,7 +65,7 @@
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
             <ul class="flex flex-col md:flex-row justify-center list-reset">
                 <li class="md:mr-2">
-                    &copy; <a href="https://www.linkedin.com/in/muhammadmuhlas" title="Muhammad Muhlas">Muhammad Muhlas</a> {{ date('Y') }}.
+                    &copy; <a href="https://www.linkedin.com/in/muhammadmuhlas" target="_blank" title="Muhammad Muhlas">Muhammad Muhlas</a> {{ date('Y') }}.
                 </li>
             </ul>
         </footer>
