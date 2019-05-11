@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-display_url: https://abror-net-sites.netlify.com
+display_url: https://abror.net
 
 publish_mode: editorial_workflow
 media_folder: "source/assets/images/uploads"
@@ -35,7 +35,7 @@ collections:
         name: "categories"
         widget: "select"
         multiple: true
-        options: ["feature", "configuration"]
+        options: ["featured", "dump", "information", "important", "tricks"]
       - { label: "Featured?", name: "featured", widget: "boolean", default: false, hint: "Should it be featured on the home page?" }
       - { name: "extends", widget: "hidden", required: true, default: "_layouts.post" }
       - { name: "section", widget: "hidden", required: true, default: "content" }
