@@ -3,20 +3,6 @@ import format from "https://unpkg.com/date-fns@2.0.0-alpha.2/esm/format/index.js
 
 const html = htm.bind(h);
 
-// Preview component for a Page
-const Page = createClass({
-  render() {
-    const entry = this.props.entry;
-
-    return html`
-      <main>
-        <h1>${entry.getIn(["data", "title"], null)}</h1>
-        ${this.props.widgetFor("body")}
-      </main>
-    `;
-  }
-});
-
 // Preview component for a Post
 const Post = createClass({
   render() {
@@ -27,7 +13,7 @@ const Post = createClass({
         <article>
           <p/>
           <h1>${entry.getIn(["data", "title"], null)}</h1>
-          <h3>${entry.getIn(["data", "description"], null)}</h3>
+          <p>${entry.getIn(["data", "description"], null)}</p>
           <p>
             <small>
               <time
@@ -59,7 +45,6 @@ const Post = createClass({
 
 // Register the Post component as the preview for entries in the blog collection
 CMS.registerPreviewTemplate("posts", Post);
-CMS.registerPreviewTemplate("pages", Page);
 
 CMS.registerPreviewStyle("/assets/css/main.css");
 // Register any CSS file on the home page as a preview style

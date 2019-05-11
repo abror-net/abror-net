@@ -24,7 +24,7 @@
             <p class="mt-0 mb-4">{!! $featuredPost->getExcerpt() !!}</p>
 
             <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}" class="tracking-wide mb-4">
-                {{ ['Read Me !!!', 'Read This', 'Looks Interesting!', 'Try This!', 'Go Here!', 'Click Me!', 'Me? Yes!'][mt_rand(0, 6)] }}
+                {{ ['Read Me !', 'Read This!', 'Looks Interesting!', 'Try This!', 'Go Here!', 'Click Me!', 'Me? Yes!'][mt_rand(0, 6)] }}
             </a>
         </div>
 

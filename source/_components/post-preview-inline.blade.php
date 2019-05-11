@@ -11,13 +11,24 @@
         >{{ $post->title }}</a>
     </h2>
 
-    <p class="mb-4 mt-0">{!! $post->description !!}</p>
-
+    <p class="mb-4 mt-0">
+        @if ($post->categories)
+        @foreach ($post->categories as $i => $category)
+            <a
+                href="{{ '/blog/categories/' . $category }}"
+                title="View posts in {{ $category }}"
+                class="inline-block bg-grey-light hover:bg-blue-lighter leading-loose tracking-wide text-grey-darkest uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+            >{{ $category }}</a>
+        @endforeach
+        @endif
+        <br> 
+        {!! $post->description !!} 
+    </p>
     <p class="mb-4 mt-0">{!! $post->getExcerpt(200) !!}</p>
 
     <a
         href="{{ $post->getUrl() }}"
         title="Read more - {{ $post->title }}"
         class="uppercase font-semibold tracking-wide mb-2"
-    >Read</a>
+    >{{ ['Read Me !!!', 'Read This', 'Looks Interesting!', 'Try This!', 'Go Here!', 'Click Me!', 'Me? Yes!'][mt_rand(0, 6)] }}</a>
 </div>
