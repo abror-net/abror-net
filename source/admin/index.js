@@ -1,5 +1,61 @@
-import Post from "/admin/post.js";
-import Page from "/admin/page.js";
+import htm from "https://unpkg.com/htm?module";
+import format from "https://unpkg.com/date-fns@2.0.0-alpha.2/esm/format/index.js?module";
+
+const html = htm.bind(h);
+
+// Preview component for a Page
+const Page = createClass({
+  render() {
+    const entry = this.props.entry;
+
+    return html`
+      <main>
+        <h1>${entry.getIn(["data", "title"], null)}</h1>
+        ${this.props.widgetFor("body")}
+      </main>
+    `;
+  }
+});
+
+// Preview component for a Post
+const Post = createClass({
+  render() {
+    const entry = this.props.entry;
+
+    return html`
+      <main>
+        <article>
+          <p/>
+          <h1>${entry.getIn(["data", "title"], null)}</h1>
+          <h3>${entry.getIn(["data", "description"], null)}</h3>
+          <p>
+            <small>
+              <time
+                >${
+                  format(
+                    entry.getIn(["data", "date"], new Date().parse),
+                    "DD MMM, YYYY"
+                  )
+                }</time
+              >, by ${entry.getIn(["data", "author"], null)}
+            </small>
+          </p>
+          <p>
+            ${
+              entry.getIn(["data", "categories"], []).map(
+                category =>
+                  html`
+                    <a href="#" rel="tag">${category}</a>
+                  `
+              )
+            }
+          </p>
+          ${this.props.widgetFor("body")}
+        </article>
+      </main>
+    `;
+  }
+});
 
 // Register the Post component as the preview for entries in the blog collection
 CMS.registerPreviewTemplate("posts", Post);
