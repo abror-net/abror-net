@@ -3,9 +3,9 @@
 return [
     'baseUrl' => '',
     'production' => false,
-    'siteName' => 'Blog Starter Template',
-    'siteDescription' => 'Generate an elegant blog with Jigsaw',
-    'siteAuthor' => 'Author Name',
+    'siteName' => 'Abror Net',
+    'siteDescription' => 'Sharing Radical Solution',
+    'siteAuthor' => 'Muhammad Muhlas',
 
     // collections
     'collections' => [
