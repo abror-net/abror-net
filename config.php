@@ -3,14 +3,14 @@
 return [
     'baseUrl' => '',
     'production' => false,
-    'siteName' => 'Abror Net',
-    'siteDescription' => 'Serving Radical Solution',
-    'siteAuthor' => 'Muhammad Muhlas Abror',
+    'siteName' => 'Blog Starter Template',
+    'siteDescription' => 'Generate an elegant blog with Jigsaw',
+    'siteAuthor' => 'Author Name',
 
     // collections
     'collections' => [
         'posts' => [
-            'author' => 'Muhammad Muhlas', // Default author, if not provided in a post
+            'author' => 'Author Name', // Default author, if not provided in a post
             'sort' => '-date',
             'path' => 'blog/{filename}',
         ],

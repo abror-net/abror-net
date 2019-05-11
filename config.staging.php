@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'baseUrl' => 'https://abror-net-sites.netlify.com',
+    'baseUrl' => 'http://jigsaw-blog-staging.tighten.co',
     'production' => false,
 ];

@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'baseUrl' => 'https://abror-net-sites.netlify.com',
+    'baseUrl' => 'https://my-jigsaw-blog.com',
     'production' => true,
 ];
