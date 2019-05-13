@@ -3,7 +3,7 @@ title: Hello!
 author: Muhammad Muhlas
 date: '2019-05-12T06:00:00'
 description: "\U0001F607\U0001F92A\U0001F60D\U0001F923\U0001F9D0"
-cover_image: ''
+cover_image: /assets/images/uploads/banner-sunrise.jpg
 categories:
   - featured
   - information
