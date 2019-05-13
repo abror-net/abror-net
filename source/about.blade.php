@@ -10,7 +10,7 @@
 @section('body')
     <h1>About</h1>
 
-    <img src="https://lh3.googleusercontent.com/y-HaP8FYnPHC0ds9qqkDXVCZx3DoPVwsodznSa9VbVqIoL8hfQ8fvhy1pgeyqJEpHVJzaEz51vznBqT4m5vwKFdb_zPCJqgfl_-whT4bH-HiElHRCcaiFxgTFMybQaGksp_EXvbnAs8=w1200"
+    <img src="/assets/img/muhammadmuhlas.jpg"
         alt="About image"
         class="flex rounded-full bg-contain mx-auto md:float-right my-6 md:ml-10" style="width: 29rem;">
     <p class="mb-6">
