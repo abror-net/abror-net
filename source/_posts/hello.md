@@ -7,7 +7,7 @@ cover_image: /assets/images/uploads/banner-sunrise.jpg
 categories:
   - featured
   - information
-featured: true
+featured: false
 extends: _layouts.post
 section: content
 ---
