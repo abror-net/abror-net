@@ -31,7 +31,7 @@ const Post = createClass({
               entry.getIn(["data", "categories"], []).map(
                 category =>
                   html`
-                    <a href="#" rel="tag">${category}</a>
+                    <a href="#" rel="tag">${category}</a>, 
                   `
               )
             }
