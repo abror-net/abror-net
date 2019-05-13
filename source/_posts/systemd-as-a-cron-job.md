@@ -9,7 +9,7 @@ cover_image: /assets/images/uploads/screen-shot-2019-05-14-at-03.11.09.png
 categories:
   - information
   - featured
-featured: false
+featured: true
 extends: _layouts.post
 section: content
 ---
