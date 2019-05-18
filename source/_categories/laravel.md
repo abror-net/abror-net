@@ -1,7 +1,7 @@
 ---
 extends: _layouts.category
-title: Tricks
+title: Laravel
 description: All posts that are about new tricks.
 ---
 
-These posts are about new tricks provided to you.
+Who love artisan? I do. here is the post about Laravel.

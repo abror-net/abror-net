@@ -24,7 +24,7 @@ collections:
       - { label: "Author", name: "author", widget: "string", required: true, default: "Muhammad Muhlas" }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDThh:mm:ss", required: true, default: "" }
       - { label: "Description", name: "description", widget: "string", required: true, default: "" }
-      - { label: "Content", name: "body", widget: "markdown", hint: "Main content goes here." }
+      - { label: "Content", name: "body", widget: "markdown", hint: "Main content goes here.", default: "This post might be just an info or currently won progress." }
       - label: "Cover image"
         name: "cover_image"
         widget: "image"
@@ -36,7 +36,7 @@ collections:
         name: "categories"
         widget: "select"
         multiple: true
-        options: ["featured", "dump", "information", "important", "tricks"]
+        options: ["note", "kubernetes", "ruby", "rails", "php", "laravel", "go", "gamacloud", "tricks", "algorithm"]
       - { label: "Featured?", name: "featured", widget: "boolean", default: false, hint: "Should it be featured on the home page?" }
       - { name: "extends", widget: "hidden", required: true, default: "_layouts.post" }
       - { name: "section", widget: "hidden", required: true, default: "content" }
